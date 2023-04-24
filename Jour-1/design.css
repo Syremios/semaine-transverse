@@ -1,0 +1,33 @@
+header {
+    background-color: antiquewhite;
+    margin: -1%;
+    padding: 1%;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 3%;
+}
+
+article {
+    background-color: lightgray;
+    padding: 1%;
+    margin: 2%;
+}
+
+th {
+    border: solid;
+    text-align: center;
+}
+
+td {
+    border: solid;
+    padding: 1%;
+    text-align: center;
+}
+
+footer {
+    background-color: antiquewhite;
+    margin: -1%;
+    padding: 1%;
+}
