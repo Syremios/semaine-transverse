@@ -4,9 +4,22 @@ header {
     padding: 1%;
 }
 
+h1 {
+    font-size: 34px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
 h3 {
     text-align: center;
     margin-top: 3%;
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 20px;
 }
 
 article {
@@ -24,6 +37,7 @@ td {
     border: solid;
     padding: 1%;
     text-align: center;
+    width: 70%;
 }
 
 footer {
