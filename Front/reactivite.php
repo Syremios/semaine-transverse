@@ -1,23 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-		<title>DigiDrive</title>
-		<link rel="icon" href="img/icon.png" />
-		<link rel="stylesheet" href="design.css" />
-	</head>	
-	<body>
-		<header>
-			<h1>DigiDrive</h1>
-			<h2>Evaluation de la maturité d’une entreprise face aux mutations</h2> 
-			<nav>
-				<a href="index.html">Accueil</a>
-			</nav>
-		</header>
 		<section>
             <h3>Axe réactivité</h3>
 			<article>
-
                 <h4>Vélocité de réponse</h4>
                 <table>
                     <tr>
@@ -146,6 +129,3 @@
                 </p>
             </article>
 		</section>
-		<footer>Copyright</footer>
-	</body>
-</html>
