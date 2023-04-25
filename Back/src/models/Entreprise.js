@@ -12,7 +12,7 @@ module.exports = (sequelize) => {
             Entreprise.hasMany(db.Item, { 
                 sourceKey: 'id',
                 foreignKey: 'idEntreprise',
-                as: 'Entreprise',
+                as: 'Item',
                 allowNull: false
             });
         }

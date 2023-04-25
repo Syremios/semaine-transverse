@@ -34,7 +34,7 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNull:false
         },
-        repopointnse: {
+        point: {
             type: DataTypes.INTEGER,
             allowNull:false
         },

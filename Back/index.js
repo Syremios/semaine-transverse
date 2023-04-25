@@ -63,7 +63,7 @@ app.listen(port, async () => {
         await db.initialize();
     }
     catch(e){
-
+        
     }
     console.log(`App listening on port ${port}`);
 })

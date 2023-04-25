@@ -1,7 +1,7 @@
 {
-    "numerique": {
+    "competence": {
         "id": 1,
-        "valeur": "Numérique",
+        "valeur": "Compétence",
         "item": {
             "excellence": {
                 "id": 1,
@@ -186,9 +186,9 @@
         }
     },
     "reactivite": {
-        "id": 3,
-        "nom": "Réactivité",
-        "valeur": {
+        "id": 2,
+        "valeur": "Réactivité",
+        "item": {
             "Velocite": {
                 "id": 4,
                 "valeur": "Vélocité de réponse",
@@ -413,10 +413,10 @@
             }
         }
     },
-    "competence": {
+    "numerique": {
         "id": 3,
-        "nom": "Compétence",
-        "valeur": {
+        "valeur": "Numérique",
+        "item": {
             "Business": {
                 "id": 8,
                 "valeur": "Business model",
@@ -441,7 +441,7 @@
                     },
                     {
                         "id": 22,
-                        "valeur": "La mise en place d’outils numériques a-t-elle permis d'optimiser les coûts, les délais et la qualité ?",
+                        "valeur": "La mise en place d'outils numériques a-t-elle permis d'optimiser les coûts, les délais et la qualité ?",
                         "reponses": [
                             {
                                 "valeur": "Oui pour tous les critères ",
@@ -459,7 +459,7 @@
                     },
                     {
                         "id": 23,
-                        "valeur": "Comment les outils sont-ils intégrés dans les process de l’entreprise ?",
+                        "valeur": "Comment les outils sont-ils intégrés dans les process de l'entreprise ?",
                         "reponses": [
                             {
                                 "valeur": "A part entière, il existe des procédures et formations aux outils, ces outils sont intituitifs et adaptés à l'activité",
@@ -477,72 +477,72 @@
                     },
                     {
                         "id": 24,
-                        "valeur": "Mesure de la vélocité de l'équipe (indicateur de suivi du travail d'une équipe de conception)",
+                        "valeur": "Comment partagez-vous les données numériques avec les parties prenantes (clients, fournisseurs,…) ?",
                         "reponses": [
                             {
-                                "valeur": "Mesure de la vélocité",
+                                "valeur": "En mode avancé : des plateformes dédiées (type extranet, applications) sont intégrées au mode de partage permanent ",
                                 "points": 2
                             },
                             {
-                                "valeur": "Suivi des tâches",
+                                "valeur": "En mode collaboratif : quelques aménagements (type sharepoint, drive) pour des sujets plutôt ponctuels",
                                 "points": 1
                             },
                             {
-                                "valeur": "Jamais",
+                                "valeur": "En mode novice : au mieux par mail ou via le site internet",
                                 "points": 0
                             }
                         ]
                     },
                     {
                         "id": 25,
-                        "valeur": "Mesure de la vélocité de l'équipe (indicateur de suivi du travail d'une équipe de conception)",
+                        "valeur": "Mesurez-vous les impacts du numérique sur votre entreprise ?",
                         "reponses": [
                             {
-                                "valeur": "Mesure de la vélocité",
+                                "valeur": "Oui des outils de mesure sont en place",
                                 "points": 2
                             },
                             {
-                                "valeur": "Suivi des tâches",
+                                "valeur": "Oui et non on observe sans mesurer",
                                 "points": 1
                             },
                             {
-                                "valeur": "Jamais",
+                                "valeur": "Non",
                                 "points": 0
                             }
                         ]
                     },
                     {
                         "id": 26,
-                        "valeur": "Mesure de la vélocité de l'équipe (indicateur de suivi du travail d'une équipe de conception)",
+                        "valeur": "Quel est l'impact du numérique sur la démarche RSE de l'entreprise ?",
                         "reponses": [
                             {
-                                "valeur": "Mesure de la vélocité",
+                                "valeur": "Le numérique est un sujet totalement rattaché à la démarche RSE",
                                 "points": 2
                             },
                             {
-                                "valeur": "Suivi des tâches",
+                                "valeur": "C'est un sujet observé de loin, on traite les questions d'obligation légales sans aller plus loin",
                                 "points": 1
                             },
                             {
-                                "valeur": "Jamais",
+                                "valeur": "Absence de démarche RSE",
                                 "points": 0
                             }
                         ]
                     },
                     {
                         "id": 27,
-                        "valeur": "Mesure de la vélocité de l'équipe (indicateur de suivi du travail d'une équipe de conception)",
+                        "valeur": "Existe-t-il des freins (stratégiques, financiers,…) à l'investissement dans les outils numériques ?",
                         "reponses": [
                             {
-                                "valeur": "Mesure de la vélocité",
+                                "valeur": "Non des budgets sont alloués et l'entreprise a bien compris cette nécessité dans sa stratégie",
                                 "points": 2
                             },
                             {
-                                "valeur": "Suivi des tâches",
+                                "valeur": "Oui l'entreprise est plutôt frileuse, on ne dépense que le strict nécessaire pour que les outils fonctionnent sans recherche de performance",
                                 "points": 1
                             },
                             {
-                                "valeur": "Jamais",
+                                "valeur": "Oui la statégie de l'entreprise n'est pas orientée en faveur du numérique, elle n'investit pas",
                                 "points": 0
                             }
                         ]
@@ -551,11 +551,249 @@
             },
             "Relation": {
                 "id": 9,
-                "valeur": "Relation client"
+                "valeur": "Relation client",
+                "questions":[
+                    {
+                        "id": 28,
+                        "valeur": "L'entreprise dispose-t-elle : d'un site internet, d'un compte LinkedIn, d'une page Facebook, d'un compte Twitter,... ?",
+                        "reponses": [
+                            {
+                                "valeur": "Oui la présence de l'entreprise sur les réseaux est visible, elle correspond au secteur d'activité",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Oui la présence de l'entreprise sur les réseaux est visible, elle correspond au secteur d'activité",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Non le site/la page réseau sont inexistants ou inactifs",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 29,
+                        "valeur": "Comment utilisez-vous le numérique dans la relation client ? (nouveau modèle de vente, nouveau modèle d'échanges avec les clients, communauté, story, chat,...)",
+                        "reponses": [
+                            {
+                                "valeur": "Plusieurs modes d'utilisation sont possibles pour échanger avec l'externe, ils sont performants et adaptés avec l'activité de l'entreprise",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Des accès dédiés pour les échanges entre le client et l'entreprise sont existent, le suivi des contacts n'est pas optimal",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Absence de plateforme de contact",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 30,
+                        "valeur": "L'entreprise dispose-t-elle d'un community manager ?",
+                        "reponses": [
+                            {
+                                "valeur": "Oui",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Non mais une personne se charge de l'animation des réseaux sociaux parmi ses autres tâches",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Non aucune personne n'est dédiée ",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 31,
+                        "valeur": "Certains de vos collaborateurs sont-ils actifs sur les réseaux sociaux au nom de l'entreprise ?",
+                        "reponses": [
+                            {
+                                "valeur": "Oui avec des incitations de l'entreprise pour le faire",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Oui sans incitation",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Non ou rarement",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 32,
+                        "valeur": "Comment mesurez-vous et exploitez-vous les données issues du site de votre entreprise ?",
+                        "reponses": [
+                            {
+                                "valeur": "Des indicateurs sont mis en place afin de mesurer l'efficacité et l'impact du site sur les réseaux, une recherche de performance est en place pour toucher toujours plus et mieux",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Des indicateurs sont en place mais plutôt de façon passive, ils servent à mesurer ",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Absence de suivi",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 33,
+                        "valeur": "Avez-vous observé chez vos concurrents des pratiques innovantes ?",
+                        "reponses": [
+                            {
+                                "valeur": "Oui elles servent comme base de reflexion et de développement pour notre propre entreprise. On peut être rivaliser !",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Oui ils ont quelques belles idées, si seulement on pouvait faire aussi bien qu'eux",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Oui ils sont tellement performants et en avance que nous pourrions perdre des marchés",
+                                "points": 0
+                            }
+                        ]
+                    }
+                ]
             },
             "Management": {
                 "id": 10,
-                "valeur": "Management"
+                "valeur": "Management",
+                "questions":[
+                    {
+                        "id": 34,
+                        "valeur": "Vos collaborateurs sont-ils équipés de nouveaux équipements numériques de travail (PC portable, tablette, smartphone,…) ? ",
+                        "reponses": [
+                            {
+                                "valeur": "Les processus de travail s'appuient sur des outils numériques quand ceux-ci sont possibles. L'ensemble des fonctions de l'entreprise sont équipées pour pouvoir réaliser le travail à distance ",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Les processus s'appuient rarement sur la numérisation des données et les outils numériques. Le potentiel ne semble pas pleinement exploité. ",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Les fonctions supports ne sont pas amenées à être équipé pour le travail à distance. L'entreprise fonctionne majoritairement sur le mode papier.",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 35,
+                        "valeur": "L'arrivée des outils digitaux a-t-elle eu un impact sur les pratiques et la culture de l'entreprise ?",
+                        "reponses": [
+                            {
+                                "valeur": "Oui gain de temps, facilité, économies et fiabilité",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Oui dans l'ensemble toutefois nous rencontrons parfois des contraintes (pratiques, techniques,…)",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Non au contraire, peu de monde y adhère",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 36,
+                        "valeur": "Comment vous êtes-vous approprié et comment avez-vous accompagné ces évolutions?",
+                        "reponses": [
+                            {
+                                "valeur": "Tout est en place pour faciliter la compréhension et l'adhésion aux nouveaux outils/pratiques",
+                                "points": 2
+                            },
+                            {
+                                "valeur": " La communication n'est pas parfaite, les personnes qui peuvent se sentir en difficultés avec les nouvelles pratiques ne sont pas forcémment considérées. ",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Absence de communication et d'accompagnement",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 37,
+                        "valeur": "Les nouvelles possibilités technologiques ont-elles fait évoluer le modèle d'organisation de l'entreprise et/ou votre management, vers plus de collaboration avec des acteurs internes ou externes ?",
+                        "reponses": [
+                            {
+                                "valeur": "Oui on sort complétement du mode silot et on favorise le mode projet",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Oui quelques évolutions s'opèrent pour travailler en inter-service ou avec l'externe, toutefois le potentiel n'est pas pleinement exploité",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "L'organisation est en silot, absence de projets transversaux et d'interactions avec les autres sites",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 38,
+                        "valeur": "Mobilisez-vous des outils de veille et mettez-vous en œuvre des modalités de curation et de partage de l' information ?",
+                        "reponses": [
+                            {
+                                "valeur": "Oui l'entreprise est en capacité de mesurer sa performance et de réagir rapidement pour se mettre à jour",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Il y a un peu de benchmark toutefois les décisions d'évolutions sont un peu tardive (quand il n y a plus le choix)",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Absence de veille",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 39,
+                        "valeur": "Les fonctionnalités des outils sont-elles augmentées par la pratique de vos collaborateurs ?",
+                        "reponses": [
+                            {
+                                "valeur": "Oui totalement les outils s'adaptent au terrain quotidiennement",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "Oui mais les outils sont vieillissants, il y a des freins pour les faire évoluer",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Absence de prise en compte des pratiques terrain",
+                                "points": 0
+                            }
+                        ]
+                    },
+                    {
+                        "id": 40,
+                        "valeur": "Comment accompagnez-vous vos collaborateurs dans la transition numérique ?",
+                        "reponses": [
+                            {
+                                "valeur": "L'entreprise est pro-active par la promotion des innovations et des outils numériques. J'adgère",
+                                "points": 2
+                            },
+                            {
+                                "valeur": "L'entreprise accompagne en faisant de son mieux pour faire adhérer les autres, il y a parfois quelques blocages. J'aimerais parfois être moi-même accompagné",
+                                "points": 1
+                            },
+                            {
+                                "valeur": "Absence d'accompagnement",
+                                "points": 0
+                            }
+                        ]
+                    }
+                ]
             }
         }
     }

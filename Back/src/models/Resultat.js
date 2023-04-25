@@ -11,7 +11,7 @@ module.exports = (sequelize) => {
             Resultat.belongsTo(db.Item, { 
                 sourceKey: 'id',
                 foreignKey: 'idItem',
-                as: 'Item',
+                as: 'Resultat',
                 allowNull: false
             });
 
@@ -22,7 +22,7 @@ module.exports = (sequelize) => {
                 allowNull: false
             });
 
-            Resultat.hasMany(db.ReponseList, { 
+            Resultat.belongsTo(db.ReponseList, { 
                 sourceKey: 'id',
                 foreignKey: 'idReponseList',
                 as: 'Reponse',

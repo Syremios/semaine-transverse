@@ -13,7 +13,7 @@ module.exports = (sequelize) => {
             Item.belongsTo(db.Entreprise, {
                 sourceKey: 'id',
                 foreignKey: 'idEntreprise',
-                as: 'Entreprise',
+                as: 'Item',
                 allowNull: false    
             });
 
@@ -27,7 +27,7 @@ module.exports = (sequelize) => {
             Item.hasMany(db.Resultat, { 
                 sourceKey: 'id',
                 foreignKey: 'idItem',
-                as: 'Item',
+                as: 'Resultat',
                 allowNull: false
             });
         }

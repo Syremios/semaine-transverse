@@ -21,122 +21,63 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 
+const ressource = require("./../ressource/questionlist.json");
+
 const initializeFunc = [];
 
-const AXE = {
-	idNumerique: 1,
-	idReactivite: 2,
-	idCompetence: 3
-}
-/**
- * Créé les axes
- */
-const initializeAXE = async () => {
-	//Load les type d'interaction
-	await db.Axe.create({
-		id: AXE.idNumerique,
-		nom: "Numérique"
-	});
-	await db.Axe.create({
-		id: AXE.idReactivite,
-		nom: "Réactivité"
-	});
-	await db.Axe.create({
-		id: AXE.idCompetence,
-		nom: "Compétence"
-	});
-}
-initializeFunc.push(initializeAXE);
+const initializeQuestion = async () => {
 
-// Créé les Items
 
-const ITEM = {
-	idExcellence: 1,
-	idAgile: 2,
-	idGestion: 3,
-	idVelocite: 4,
-	idEnvironnement: 5,
-	idDefi: 6,
-	idVeille: 7,
-	idBusiness: 8,
-	idRelation: 9,
-	idManagement: 10
-}
-const initializeITEM = async () => {
+	const axeKeys = Object.keys(ressource);
 
-	// Compétence
-	await db.ItemList.create({
-		id: ITEM.idExcellence,
-		nom: "Excellence Technique/Communauté de pratiques",
-		idAxe: AXE.idCompetence,
-	});
+	axeKeys.forEach(async (axeKey) => {
 
-	await db.ItemList.create({
-		id: ITEM.idAgile,
-		nom: "Faire agile",
-		idAxe: AXE.idCompetence,
-	});
+		const axe = ressource[axeKey];
+		try {
+			// Ajout des Axes
+			await db.Axe.create({
+				id: axe.id,
+				nom: axe.valeur
+			});
+		}
+		catch (e) {
+			return;
+		}
+		const itemKeys = Object.keys(axe.item);
 
-	await db.ItemList.create({
-		id: ITEM.idGestion,
-		nom: "Gestion humaine des compétences",
-		idAxe: AXE.idCompetence,
-	});
+		itemKeys.forEach(async (itemkey) => {
+			const item = axe.item[itemkey];
+			// Ajout des Items
+			await db.ItemList.create({
+				id: item.id,
+				nom: item.valeur,
+				idAxe: axe.id,
+			});
 
-	//Reactivité
-	await db.ItemList.create({
-		id: ITEM.idVelocite,
-		nom: "Vélocité de réponse",
-		idAxe: AXE.idReactivite,
-	});
+			item.questions.forEach(async (question) => {
 
-	await db.ItemList.create({
-		id: ITEM.Environnements,
-		nom: "Environnements souples",
-		idAxe: AXE.idReactivite,
-	});
+				// Ajout des Questions
+				await db.QuestionList.create({
+					id: question.id,
+					question: question.valeur,
+					idItemList: item.id,
+				});
 
-	await db.ItemList.create({
-		id: ITEM.idDefi,
-		nom: "Défi environnemental",
-		idAxe: AXE.idReactivite,
-	});
+				question.reponses.forEach(async (reponse) => {
+					//Ajout des Responses
+					await db.ReponseList.create({
+						id: reponse.id,
+						reponse: reponse.valeur,
+						point: reponse.points,
+						idQuestionList: question.id,
+					});
+				})
+			})
+		})
 
-	await db.ItemList.create({
-		id: ITEM.idVeille,
-		nom: "Veille et benchmark",
-		idAxe: AXE.idReactivite,
-	});
-
-	// Numérique
-	await db.ItemList.create({
-		id: ITEM.idBusiness,
-		nom: "Business model",
-		idAxe: AXE.idNumerique,
-	});
-
-	await db.ItemList.create({
-		id: ITEM.idRelation,
-		nom: "Relation client",
-		idAxe: AXE.idNumerique,
-	});
-
-	await db.ItemList.create({
-		id: ITEM.idManagement,
-		nom: "Management",
-		idAxe: AXE.idNumerique,
 	});
 }
-initializeFunc.push(initializeITEM);
-
-// Créé les questions
-initializeQUESTION = async () => {
-	await db.QuestionList.create({
-		nom: "Votre entreprise dégage t-elle une part de CA par des produits ou services en ligne",
-		idItemList: 0,
-	});
-};
-initializeFunc.push(initializeQUESTION);
+initializeFunc.push(initializeQuestion);
 
 db.initialize = async () => {
 	initializeFunc.forEach(async func => {
@@ -148,5 +89,4 @@ db.initialize = async () => {
 		}
 	});
 }
-db.AXE = AXE;
 module.exports = db;
