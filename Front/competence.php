@@ -1,3 +1,4 @@
+<?php require("header.php") ?>
 		<section>
 			<h3>Axe Compétence</h3>
 			<article>
@@ -124,3 +125,4 @@
 				</p>
 			</article>
 		</section>
+<?php require("footer.php") ?>

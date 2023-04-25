@@ -1,3 +1,4 @@
+<?php require("header.php") ?>
 		<section>
             <h3>Axe réactivité</h3>
 			<article>
@@ -129,3 +130,4 @@
                 </p>
             </article>
 		</section>
+<?php require("footer.php") ?>

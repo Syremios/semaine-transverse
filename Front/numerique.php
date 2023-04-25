@@ -1,3 +1,4 @@
+<?php require("header.php") ?>
     <section>
         <h3>Axe numérique</h3>
         <article>
@@ -207,3 +208,4 @@
             </p>
         </article>
     </section>
+<?php require("footer.php") ?>
