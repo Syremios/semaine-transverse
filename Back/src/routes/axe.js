@@ -10,5 +10,11 @@ module.exports = {
             middleware:[],
             func: axeController.get_all
         },
+        {
+            url: '/:idAxe',
+            method: 'get',
+            middleware:[],
+            func: axeController.get_by_id
+        },
     ]
 }

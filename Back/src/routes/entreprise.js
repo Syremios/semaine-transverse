@@ -16,5 +16,11 @@ module.exports = {
             middleware:[],
             func: entrepriseController.get_by_id
         },
+        {
+            url: '/:idEntreprise/score',
+            method: 'get',
+            middleware:[],
+            func: entrepriseController.get_score
+        },
     ]
 }
