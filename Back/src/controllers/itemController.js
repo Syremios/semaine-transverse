@@ -22,23 +22,17 @@ module.exports = {
     get_by_idEntreprise: async (req, res, next) => {
         const {idEntreprise,idAxe} = req.params;
         try {
-            const item = await db.Item.findAll({
-                where: { idEntreprise: idEntreprise },
+
+            const itemList = await db.ItemList.findAll({
+                where: { idAxe: idAxe },
                 include:[
                     {
-                        model: db.ItemList,
-                        as: "ItemList",
-                        include:[
-                            {
-                                model: db.Axe,
-                                as: "Axe",
-                                where: { id: idAxe },
-                            },
-                        ]
+                        model: db.Item,
+                        where: { idEntreprise: idEntreprise },
                     },
                 ]
             });
-            res.json(item);
+            res.json(itemList);
         }
         catch (e) {
             console.log(e);
