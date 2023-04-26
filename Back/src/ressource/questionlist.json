@@ -258,15 +258,15 @@
                         "valeur": "Les installations techniques et de gestion sont modernes (TIC/ERP/CRM)",
                         "reponses": [
                             {
-                                "valeur": "Oui",
+                                "valeur": "En cas de besoin, le système d'information favorise la réactivité",
                                 "points": 2
                             },
                             {
-                                "valeur": "Oui un peu",
+                                "valeur": "Le système d'information permet avec quelques difficultés d'avoir de la réactivité",
                                 "points": 1
                             },
                             {
-                                "valeur": "Non",
+                                "valeur": "Le système d'information freine toute tentative de réagir rapidement",
                                 "points": 0
                             }
                         ]

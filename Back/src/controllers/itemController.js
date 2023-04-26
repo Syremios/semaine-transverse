@@ -32,7 +32,7 @@ module.exports = {
                             {
                                 model: db.Axe,
                                 as: "Axe",
-                                where: { idAxe: idAxe },
+                                where: { id: idAxe },
                             },
                         ]
                     },
@@ -41,6 +41,7 @@ module.exports = {
             res.json(item);
         }
         catch (e) {
+            console.log(e);
             next({ status: 404, message: 'Une erreur est survenue' });
         }
     },
