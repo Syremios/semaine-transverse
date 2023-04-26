@@ -1,10 +1,11 @@
+<?php require("header.php") ?>
 		<section>
 			<h3>Diagnostic</h3>
 			<article>
 				<p>Entreprise : Euro-Information</p> 
-				<p>-><a href="competence.html">Voir Axe Compétences</a></p>
-				<p>-><a href="reactivite.html">Axe Réactivité</a></p>
-				<p>-><a href="numerique.html">Axe Numérique</a></p>
+				<p>-><a href="competence.php">Voir Axe Compétences</a></p>
+				<p>-><a href="reactivite.php">Axe Réactivité</a></p>
+				<p>-><a href="numerique.php">Axe Numérique</a></p>
 				<br>
 				<p><strong>Synthèse :</strong></p>
 				<p>
@@ -14,3 +15,4 @@
 				</p>
 			</article>
 		</section>
+<?php require("footer.php") ?>
