@@ -23,7 +23,17 @@ module.exports = {
         const {idItem} = req.params;
         try {
             const resultat = await db.Resultat.findAll({
-                where: { idItem: idItem }
+                where: { idItem: idItem },
+                include:[
+                    {
+                        model: db.QuestionList,
+                        as: "Question",
+                    },
+                    {
+                        model: db.ReponseList,
+                        as: "Response",
+                    }
+                ]
             });
             res.json(resultat);
         }

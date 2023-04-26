@@ -20,10 +20,23 @@ module.exports = {
         }
     },
     get_by_idEntreprise: async (req, res, next) => {
-        const {idEntreprise} = req.params;
+        const {idEntreprise,idAxe} = req.params;
         try {
             const item = await db.Item.findAll({
-                where: { idEntreprise: idEntreprise }
+                where: { idEntreprise: idEntreprise },
+                include:[
+                    {
+                        model: db.ItemList,
+                        as: "ItemList",
+                        include:[
+                            {
+                                model: db.Axe,
+                                as: "Axe",
+                                where: { idAxe: idAxe },
+                            },
+                        ]
+                    },
+                ]
             });
             res.json(item);
         }

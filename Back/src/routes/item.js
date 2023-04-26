@@ -1,7 +1,7 @@
 const itemController = require("./../controllers/itemController.js")
 
 module.exports = {
-    groupPath:"/entreprise",
+    groupPath:"/item",
     middleware:[],
     route:[
         {
@@ -11,7 +11,7 @@ module.exports = {
             func: itemController.get_all
         },
         {
-            url: '/:idEntreprise',
+            url: '/:idEntreprise/axe/:idAxe',
             method: 'get',
             middleware:[],
             func: itemController.get_by_idEntreprise
