@@ -27,11 +27,11 @@ module.exports = {
                 include:[
                     {
                         model: db.QuestionList,
-                        as: "Question",
+                        attributes:["question"]
                     },
                     {
                         model: db.ReponseList,
-                        as: "Response",
+                        attributes:["reponse","point"]
                     }
                 ]
             });

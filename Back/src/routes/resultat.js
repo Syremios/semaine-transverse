@@ -1,7 +1,7 @@
 const resultatController = require("./../controllers/resultatController.js")
 
 module.exports = {
-    groupPath:"/entreprise",
+    groupPath:"/resultat",
     middleware:[],
     route:[
         {

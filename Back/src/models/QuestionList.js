@@ -18,7 +18,6 @@ module.exports = (sequelize) => {
             QuestionList.hasMany(db.Resultat, { 
                 sourceKey: 'id',
                 foreignKey: 'idQuestionList',
-                as: 'Question',
                 allowNull: false
             });
 

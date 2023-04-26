@@ -18,14 +18,12 @@ module.exports = (sequelize) => {
             Resultat.belongsTo(db.QuestionList, { 
                 sourceKey: 'id',
                 foreignKey: 'idQuestionList',
-                as: 'Question',
                 allowNull: false
             });
 
             Resultat.belongsTo(db.ReponseList, { 
                 sourceKey: 'id',
                 foreignKey: 'idReponseList',
-                as: 'Reponse',
                 allowNull: false
             });
         }
