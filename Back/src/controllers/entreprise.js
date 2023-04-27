@@ -70,7 +70,7 @@ module.exports = {
     get_score: async (req, res, next) => {
         const { idEntreprise } = req.params;
         try {
-            const score = {};
+            const score = [];
 
             const axeList = await db.Axe.findAll({
                 include: [
@@ -126,7 +126,10 @@ module.exports = {
                 listMoyenne.forEach(m=>{
                     moyenne+=m;
                 })
-                score[axe.nom] = (moyenne/listMoyenne.length*2.5).toFixed(2);
+                score.push({
+                        nom: axe.nom,
+                        moyenne: (moyenne/listMoyenne.length*2.5).toFixed(2)
+                    });
             });
 
 
