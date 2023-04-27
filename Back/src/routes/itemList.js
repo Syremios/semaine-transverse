@@ -16,11 +16,5 @@ module.exports = {
             middleware:[],
             func: itemListController.get_by_idAxe
         },
-        {
-            url: '/:idAxe',
-            method: 'get',
-            middleware:[],
-            func: itemListController.get_by_idAxe
-        },
     ]
 }

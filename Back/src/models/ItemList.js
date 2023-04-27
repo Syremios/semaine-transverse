@@ -12,7 +12,6 @@ module.exports = (sequelize) => {
             ItemList.belongsTo(db.Axe, {
                 sourceKey:'id',
                 foreignKey: 'idAxe',
-                as: 'Axe',
                 allowNull: false
             });
 
