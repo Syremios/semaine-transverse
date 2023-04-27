@@ -75,4 +75,13 @@ class Api
             throw new Exception($error);
         }
     }
+
+    static public function getScore($id)
+    {
+        try {
+            return Api::callApi(Api::BASE_URL . "entreprise/".$id."/score");
+        } catch (Exception $e) {
+            throw new Exception($error);
+        }
+    }
 }

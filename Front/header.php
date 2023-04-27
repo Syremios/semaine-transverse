@@ -5,6 +5,7 @@
 		<title>DigiDrive</title>
 		<link rel="icon" href="img/icon.png" />
 		<link rel="stylesheet" href="design.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
 	</head>	
     <body>
     <header>
