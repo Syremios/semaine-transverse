@@ -29,7 +29,7 @@ module.exports = {
     get_by_id: async (req, res, next) => {
         const { idEntreprise } = req.params;
         try {
-            const entreprise = await db.Entreprise.findByPk(idEntreprise,{
+            const entreprise = await db.Entreprise.findByPk(idEntreprise, {
                 include: [
                     {
                         model: db.Item,
@@ -70,34 +70,71 @@ module.exports = {
     get_score: async (req, res, next) => {
         const { idEntreprise } = req.params;
         try {
-            const entrepriseDetail = await db.Entreprise.findByPk(idEntreprise,{
+            const score = {};
+
+            const axeList = await db.Axe.findAll({
                 include: [
                     {
-                        model: db.Item,
-                        as: "Item",
+                        model: db.ItemList,
                         include: [
                             {
-                                model: db.ItemList,
-                                as: "ItemList",
-                            },
-                            {
-                                model: db.Resultat,
-                                as: "Resultat",
+                                model: db.Item,
+                                where: { idEntreprise: idEntreprise },
                                 include: [
                                     {
-                                        model: db.ReponseList,
-                                        attributes: ['point'],
-                                    }
+                                        model: db.Resultat,
+                                        as: "Resultat",
+                                        include: [
+                                            {
+                                                model: db.ReponseList,
+                                                attributes: ["point"]
+                                            }
+
+                                        ]
+                                    },
                                 ]
-                            }
+                            },
                         ]
                     },
                 ]
             });
 
-            res.json(entrepriseDetail);
+            // Pour chaque axe
+            axeList.forEach(axe => {
+
+                // Nombre d'item d'un axe
+                const nbItem = axe.ItemLists.length;
+
+                const listMoyenne = [];
+                
+                // Pour chaque Item
+                axe.ItemLists.forEach(item => {
+
+                    // récupère l'item d'une entreprise comme y'en a qu'un peur une bilan donné
+                    const entrepriseItem = item.Items[0];
+
+                    // Le nombre de question
+                    const nbQuestion = entrepriseItem.Resultat.length;
+
+                    let point = 0;
+                    entrepriseItem.Resultat.forEach(res => {
+                        point += res.ReponseList.point;
+                    });
+                    listMoyenne.push(point/nbQuestion).toFixed(2);
+                })
+                let moyenne = 0;
+                listMoyenne.forEach(m=>{
+                    moyenne+=m;
+                })
+                score[axe.nom] = (moyenne/listMoyenne.length*2.5).toFixed(2);
+            });
+
+
+
+            res.json(score);
         }
         catch (e) {
+            console.log(e);
             next({ status: 404, message: 'Une erreur est survenue' });
         }
     },
