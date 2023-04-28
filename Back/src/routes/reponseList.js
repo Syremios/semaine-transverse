@@ -1,20 +1,20 @@
-const reponseListController = require("../controllers/reponseListController.js")
+const reponseListController = require('../controllers/reponseListController');
 
 module.exports = {
-    groupPath:"/reponseList",
-    middleware:[],
-    route:[
-        {
-            url: '',
-            method: 'get',
-            middleware:[],
-            func: reponseListController.get_all
-        },
-        {
-            url: '/:idQuestion',
-            method: 'get',
-            middleware:[],
-            func: reponseListController.get_by_idQuestion
-        },
-    ]
-}
+  groupPath: '/reponseList',
+  middleware: [],
+  route: [
+    {
+      url: '',
+      method: 'get',
+      middleware: [],
+      func: reponseListController.get_all,
+    },
+    {
+      url: '/:idQuestion',
+      method: 'get',
+      middleware: [],
+      func: reponseListController.get_by_idQuestion,
+    },
+  ],
+};
