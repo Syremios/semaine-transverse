@@ -1,3 +1,7 @@
+<?php 
+include('config.php');
+$version = Config::getVersion();
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,4 +15,7 @@
     <header>
         <h1><a href="index.php">DigiDrive</a></h1>
         <h2>Evaluation de la maturité d’une entreprise face aux mutations</h2> 
+		<div class="version">
+			<p>Version <?php echo $version; ?></p>
+		</div>
     </header>
