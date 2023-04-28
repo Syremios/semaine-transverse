@@ -31,6 +31,15 @@ a:hover{
     color: rgba(255, 99, 132, 1);
 }
 
+.version {
+    float: right;
+    display: flex;
+    width: 10%;
+    justify-content: center;
+    margin-top: -10%;
+    margin-right: -2%;
+}
+
 article {
     background-color: lightgray;
     padding: 1%;
